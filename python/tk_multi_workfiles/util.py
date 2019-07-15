@@ -288,7 +288,7 @@ def resolve_filters(filters):
     :param filters: a list of filters as found in the info.yml config
     should be in the format: [[task_assignees, is, '{context.user}'],[sg_status_list, not_in, [fin,omt]]]
     
-    :return: A List of filters for use with the shotgun api
+    :return: A List of filters for use with the sg api
     """
     app = sgtk.platform.current_bundle()
 

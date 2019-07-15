@@ -952,7 +952,7 @@ class AsyncFileFinder(FileFinder):
         filtered_publishes = []
         if sg_publishes and environment and environment.publish_template and environment.context:
 
-            # convert created_at unix time stamp to shotgun std time stamp for all publishes
+            # convert created_at unix time stamp to sg std time stamp for all publishes
             for sg_publish in sg_publishes:
                 created_at = sg_publish.get("created_at")
                 if created_at:

@@ -75,7 +75,7 @@ class UserCache(Threaded):
                 users_to_fetch.add(user_id)
 
         if users_to_fetch:
-            # get user details from shotgun:
+            # get user details from sg:
             sg_users = []
             try:
                 sg_users = self._app.shotgun.find("HumanUser", [["id", "in"] + list(users_to_fetch)], self._sg_fields)
@@ -130,7 +130,7 @@ class UserCache(Threaded):
 
     def _get_user_details_for_login(self, login_name):
         """
-        Get the shotgun HumanUser entry for the specified login name
+        Get the sg HumanUser entry for the specified login name
 
         :param login_name:  The login name of the user to find
         :returns:           A Shotgun entity dictionary for the HumanUser entity found

@@ -136,10 +136,10 @@ class MultiWorkFiles(sgtk.platform.Application):
     @property
     def shotgun(self):
         """
-        Subclassing of the shotgun property on the app base class.
-        This is a temporary arrangement to be able to time some of the shotgun calls.
+        Subclassing of the sg property on the app base class.
+        This is a temporary arrangement to be able to time some of the sg calls.
         """
-        # get the real shotgun from the application base class
+        # get the real sg from the application base class
         app_shotgun = sgtk.platform.Application.shotgun.fget(self)
         # return a wrapper back which produces debug logging
         return DebugWrapperShotgun(app_shotgun, self.log_debug)

@@ -48,7 +48,7 @@ class EntityProxyModel(HierarchicalFilteringProxyModel):
     def ensure_data_is_loaded(self, index=None):
         """
         Recursively processes the model and ensures that all data
-        has been loaded into the shotgun model contained by the proxy model.
+        has been loaded into the sg model contained by the proxy model.
 
         :param index: Model index for which to recursively load data.
                       If set to None, the entire tree will be loaded.
